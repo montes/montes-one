@@ -1,0 +1,132 @@
+$primary-color:         #bf3030;
+$from-color:            $primary-color;
+$to-color:              #a60000;
+
+$secondary-color:       #269926;
+$secondary-from-color:  $secondary-color;
+$secondary-to-color:    #008500;
+
+$from-color-buy-button: #DE7416;
+$to-color-buy-button:   #D3380E;
+
+$light-text:            #FFF;
+$not-so-light-text:     #CCC;
+$dark-text:             #777;
+
+$light-background:      #FFF;
+
+$light-gray-background: #F4F4F4;
+$gray-from:             #F4F4F4;
+$gray-to:               #C4C5CA;
+
+$menu-bar-background:   #444042;
+
+$red:                   #B90016;
+$green:                 #5aac20;
+$black:                 #000;
+$grayDarker:            #222;
+$grayDark:              #333;
+$gray:                  #555;
+$grayLight:             #999;
+$grayLighter:           #eee;
+$white:                 #fff;
+
+$text-color:            $white;
+
+// General
+$linkColor: $primary-color;
+
+// Navbar
+$navbarBackgroundHighlight: $from-color;
+$navbarBackground: $to-color;
+$navbarText: $text-color;
+$navbarLinkColor: darken($text-color, 20%);
+$navbarLinkColorHover: $text-color;
+$navbarBrandColor: $text-color;
+$navbarLinkColorActive: $grayLight;
+
+@import "/Users/montes/coding/github/elements-scss/elements"; // https://github.com/montes/scss-elements/blob/master/elements.scss
+@import "compass/css3";
+@import "/Users/montes/coding/github/sass-twitter-bootstrap/lib/bootstrap.scss";
+
+@import "navbar";
+@import "article";
+@import "fonts";
+@import "comments";
+
+.more-link {
+    @extend .btn;
+    @include buttonBackground($secondary-from-color, $secondary-to-color);
+    float: right;
+    margin-top: 10px;
+}
+
+// Footer
+footer {
+    padding: 20px 10px;
+    color: $grayLighter;
+    background-color: $gray;
+}
+
+// Search
+#searchform {
+    label {
+        display: none;
+    }
+    input#s {
+        width: auto;
+        float: left;
+    }
+    #searchsubmit {
+        float: left;
+        margin: 1px 0 0 5px;
+        @include border-radius(4px);
+    }
+}
+
+.social-networks {
+    font-size: 20px;
+    list-style: none;
+    margin-bottom: 10px;
+    overflow: auto;
+    li {
+        float: left;
+        margin-right: 15px;
+        padding: 2px 0;
+        min-width: 120px;
+    }
+    .pictonic {
+        color: $gray;
+    }
+}
+
+#sidebar {
+    margin-top: 20px;
+}
+    .widget {
+        overflow: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
