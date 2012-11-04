@@ -1,0 +1,22 @@
+@import "/Users/montes/coding/github/sass-twitter-bootstrap/lib/responsive.scss";
+
+// Small screens
+@media (max-width: 767px) {
+    footer {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    article {
+        .inner {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}

@@ -8,20 +8,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="<?=get_bloginfo('template_url')?>/css/main.css">
-
+        <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+        </style>
+        <link rel="stylesheet" href="<?=get_bloginfo('template_url')?>/css/bootstrap-responsive.css">
+        <link rel="pingback" href="<?=get_bloginfo('pingback_url')?>" />
         <script src="<?=get_bloginfo('template_url')?>/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        <?php wp_head(); ?>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -29,33 +37,28 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">Project name</a>
+                    <a class="brand" href="http://mooontes.com">mooontes.com</a>
                     <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="nav-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <form class="navbar-form pull-right">
-                            <input class="span2" type="text" placeholder="Email">
-                            <input class="span2" type="password" placeholder="Password">
-                            <button type="submit" class="btn">Sign in</button>
-                        </form>
-                    </div><!--/.nav-collapse -->
+                        <?php wp_nav_menu(array(
+                            'container' => false,
+                            'menu_class' => 'nav',
+                            'walker' => new Walker_Navbar_Menu())); ?>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="container">
+            <div class="row">
+
+            <div id="top-sidebar" class="span12">
+                <?php if (!dynamic_sidebar('top-sidebar')) : ?>
+                <ul class="social-networks">
+                    <li><span class="pictonic">&#xe007;</span> <a target="_blank" href="http://github.com/montes">Mi Github</a></li>
+                    <li><span class="pictonic">&#xe01d;</span> <a target="_blank" href="http://twitter.com/mooontes">Mi Twitter</a></li>
+                </ul>
+                <?php endif; // end sidebar widget area ?>
+            </div><!-- #secondary .widget-area -->
+
+            </div><div class="row">
+
