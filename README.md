@@ -1,7 +1,7 @@
 "Montes One" Wordpress Theme
 =========================
 
-This is a very simple Wordpress theme written from scratch in a weekend, mainly for educational purposes.
+This is a very simple Wordpress responsive theme written from scratch in a weekend, mainly for educational purposes.
 
 You can see it live at http://mooontes.com
 
