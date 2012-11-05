@@ -51,8 +51,9 @@ $navbarLinkColorActive: $grayLight;
 
 @import "navbar";
 @import "article";
-@import "fonts";
 @import "comments";
+
+@include pictonic;
 
 .more-link {
     @extend .btn;
