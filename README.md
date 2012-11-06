@@ -5,6 +5,8 @@ This is a very simple Wordpress responsive theme written from scratch in a weeke
 
 You can see it live at http://mooontes.com
 
+![Screenshot](http://mooontes.com/wp-content/uploads/2012/11/mooontes-screenshot.png)
+
 Tools Used
 ----------
 
