@@ -5,6 +5,8 @@ add_filter('show_admin_bar', '__return_false');
 
 register_nav_menu('primary', __('Primary Menu'));
 
+load_theme_textdomain('montes-one', TEMPLATEPATH.'/languages/');
+
 register_sidebar(array(
   'name' => __('Lateral Sidebar'),
   'id' => 'lateral-sidebar',

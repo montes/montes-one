@@ -6,14 +6,22 @@
                     <article>
                         <div class="inner">
                             <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                            <p><?php the_content(__('Leer más')); ?></p>
+                            <p><?php the_content(__('Read more', 'montes-one')); ?></p>
                         </div>
                         <?php if (!is_page()): ?>
                             <div class="date">
                                 <?php if (get_the_date('Y') != date('Y')): ?>
-                                    <?php the_date('j M Y'); ?>
+                                    <?php if (stripos(get_bloginfo("language"), 'es-') !== false): ?>
+                                        <?php the_date('j M Y'); ?>
+                                    <?php else: ?>
+                                        <?=get_the_date()?>
+                                    <?php endif; ?>
                                 <?php else: ?>
-                                    <?php the_date('j M'); ?>
+                                    <?php if (stripos(get_bloginfo("language"), 'es-') !== false): ?>
+                                        <?php the_date('j M'); ?>
+                                    <?php else: ?>
+                                        <?=get_the_date()?>
+                                    <?php endif; ?>
                                 <?php endif; ?>
                             </div>
                         <?php endif; ?>
@@ -25,8 +33,8 @@
             <?php global $wp_query; ?>
             <?php if ($wp_query->max_num_pages > 1): ?>
                 <nav>
-                    <div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&larr;</span> Más antigüos', 'twentyeleven')); ?></div>
-                    <div class="nav-next"><?php previous_posts_link(__('Más nuevos <span class="meta-nav">&rarr;</span>', 'twentyeleven')); ?></div>
+                    <div class="nav-previous"><?php next_posts_link('<span class="meta-nav">&larr;</span> ' . __('Older posts', 'montes-one')); ?></div>
+                    <div class="nav-next"><?php previous_posts_link(__('Newer posts', 'montes-one') . ' <span class="meta-nav">&rarr;</span>'); ?></div>
                 </nav>
             <?php endif; ?>
         </div>

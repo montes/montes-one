@@ -54,8 +54,8 @@
             <div id="top-sidebar" class="span12">
                 <?php if (!dynamic_sidebar('top-sidebar')) : ?>
                 <ul class="social-networks">
-                    <li><span class="pictonic"></span> <a target="_blank" href="http://github.com/montes">Mi Github</a></li>
-                    <li><span class="pictonic"></span> <a target="_blank" href="http://twitter.com/mooontes">Mi Twitter</a></li>
+                    <li><span class="pictonic"></span> <a target="_blank" href="http://github.com/montes"><?=__('My', 'montes-one')?> Github</a></li>
+                    <li><span class="pictonic"></span> <a target="_blank" href="http://twitter.com/mooontes"><?=__('My', 'montes-one')?> Twitter</a></li>
                     <li><span class="pictonic"></span> <a target="_blank" href="mailto:javier@mooontes.com">javier@mooontes.com</a></li>
                 </ul>
                 <?php endif; // end sidebar widget area ?>
