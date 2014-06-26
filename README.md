@@ -3,9 +3,9 @@
 
 This is a very simple Wordpress responsive theme written from scratch in a weekend, mainly for educational purposes.
 
-You can see it live at http://mooontes.com
+You can see it live at http://montesjmm.com
 
-![Screenshot](http://mooontes.com/wp-content/uploads/2012/11/mooontes-screenshot.png)
+![Screenshot](http://montesjmm.es/wp-content/uploads/2012/11/mooontes-screenshot.png)
 
 Tools Used
 ----------
