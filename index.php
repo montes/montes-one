@@ -5,7 +5,11 @@
                 <?php while (have_posts()): the_post(); ?>
                     <article>
                         <div class="inner">
-                            <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                            <?php if ($wp_query->post_count == 1): ?>
+                                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                            <?php else: ?>
+                                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <?php endif; ?>
                             <p><?php the_content(__('Read more', 'montes-one')); ?></p>
                         </div>
                         <?php if (!is_page()): ?>

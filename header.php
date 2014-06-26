@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="<?=get_bloginfo('template_url')?>/css/main.css">
         <style type="text/css">
         body {
-            padding-top: 60px;
+            padding-top: 40px;
         }
         .sidebar-nav {
             padding: 9px 0;
@@ -37,7 +37,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="http://mooontes.com">mooontes.com</a>
+                    <a class="brand" href="http://<?=$_SERVER['HTTP_HOST']?>"><?=$_SERVER['HTTP_HOST']?></a>
                     <div class="nav-collapse collapse">
                         <?php wp_nav_menu(array(
                             'container' => false,
@@ -49,17 +49,24 @@
         </div>
 
         <div class="container">
+
+            <div class="row">
+                <div class="span12">
+                    <h1><?=get_bloginfo('description')?></h1>
+                </div>
+            </div>
+
             <div class="row">
 
-            <div id="top-sidebar" class="span12">
-                <?php if (!dynamic_sidebar('top-sidebar')) : ?>
-                <ul class="social-networks">
-                    <li><span class="pictonic"></span> <a target="_blank" href="http://github.com/montes"><?=__('My', 'montes-one')?> Github</a></li>
-                    <li><span class="pictonic"></span> <a target="_blank" href="http://twitter.com/mooontes"><?=__('My', 'montes-one')?> Twitter</a></li>
-                    <li><span class="pictonic"></span> <a target="_blank" href="mailto:javier@mooontes.com">javier@mooontes.com</a></li>
-                </ul>
-                <?php endif; // end sidebar widget area ?>
-            </div><!-- #secondary .widget-area -->
+                <div id="top-sidebar" class="span12">
+                    <?php if (!dynamic_sidebar('top-sidebar')) : ?>
+                    <ul class="social-networks">
+                        <li><span class="pictonic"></span> <a target="_blank" href="http://github.com/montes"><?=__('My', 'montes-one')?> Github</a></li>
+                        <li><span class="pictonic"></span> <a target="_blank" href="http://twitter.com/montesjmm"><?=__('My', 'montes-one')?> Twitter</a></li>
+                        <li><span class="pictonic"></span> <a target="_blank" href="mailto:javier@montesjmm.com">javier@montesjmm.com</a></li>
+                    </ul>
+                    <?php endif; // end sidebar widget area ?>
+                </div><!-- #secondary .widget-area -->
 
             </div><div class="row">
 
