@@ -7,25 +7,41 @@ register_nav_menu('primary', __('Primary Menu'));
 
 load_theme_textdomain('montes-one', TEMPLATEPATH.'/languages/');
 
-register_sidebar(array(
-  'name' => __('Lateral Sidebar'),
-  'id' => 'lateral-sidebar',
-  'description' => __('Lateral Sidebar.'),
-  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-  'after_widget'  => '</div>',
-  'before_title' => '<h3>',
-  'after_title' => '</h3>'
-));
+function montes_one_widgets_init()
+{
+	register_sidebar(array(
+		'name' => __('Lateral Sidebar'),
+		'id' => 'lateral-sidebar',
+		'description' => __('Lateral Sidebar.'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
 
-register_sidebar(array(
-  'name' => __('Top Sidebar'),
-  'id' => 'top-sidebar',
-  'description' => __('Top Sidebar.'),
-  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-  'after_widget'  => '</div>',
-  'before_title' => '<h3>',
-  'after_title' => '</h3>'
-));
+	register_sidebar(array(
+		'name' => __('Top Sidebar'),
+		'id' => 'top-sidebar',
+		'description' => __('Top Sidebar.'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
+
+	register_sidebar(array(
+		'name' => __('Footer Sidebar'),
+		'id' => 'footer-sidebar',
+		'description' => __('Footer Sidebar.'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
+}
+
+add_action('widgets_init', 'montes_one_widgets_init');
+
 
 /**
  * Walker for integration of WordPress custom menu with Bootstrap navbar.

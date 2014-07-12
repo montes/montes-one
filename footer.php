@@ -1,8 +1,17 @@
 
 
-            </div> <!-- /.row -->
+			</div> <!-- /.row -->
 
         </div> <!-- /.container -->
+
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<?php if (!dynamic_sidebar('footer-sidebar')) : ?>
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
 
         <hr>
         <footer>&copy; Montes 2012</footer>

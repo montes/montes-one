@@ -59,12 +59,12 @@
             <div class="row">
 
                 <div id="top-sidebar" class="span12">
+					<ul class="social-networks">
+						<li><span class="pictonic"></span> <a target="_blank" href="http://github.com/montes"><?=__('My', 'montes-one')?> Github</a></li>
+						<li><span class="pictonic"></span> <a target="_blank" href="http://twitter.com/montesjmm"><?=__('My', 'montes-one')?> Twitter</a></li>
+						<li><span class="pictonic"></span> <a target="_blank" href="mailto:javier@montesjmm.com">javier@montesjmm.com</a></li>
+					</ul>
                     <?php if (!dynamic_sidebar('top-sidebar')) : ?>
-                    <ul class="social-networks">
-                        <li><span class="pictonic"></span> <a target="_blank" href="http://github.com/montes"><?=__('My', 'montes-one')?> Github</a></li>
-                        <li><span class="pictonic"></span> <a target="_blank" href="http://twitter.com/montesjmm"><?=__('My', 'montes-one')?> Twitter</a></li>
-                        <li><span class="pictonic"></span> <a target="_blank" href="mailto:javier@montesjmm.com">javier@montesjmm.com</a></li>
-                    </ul>
                     <?php endif; // end sidebar widget area ?>
                 </div><!-- #secondary .widget-area -->
 
